@@ -55,13 +55,13 @@ public class Launcher : MonoBehaviourPunCallbacks {
         progressLabel.SetActive(true);
         controlPanel.SetActive(false);
 
-        //We check if we are econnected or not, we join if we are, else we init the connect to the server
-        if (PhotonNetwork.IsConnected)
-        {
-            //#Critical, we need at this point to attempt joining a random room. If it fails we'll get notified in OnJoinRandomFailed() and we'll create one
-            PhotonNetwork.JoinRandomRoom();
-        }
-        else
+        ////We check if we are econnected or not, we join if we are, else we init the connect to the server
+        //if (PhotonNetwork.IsConnected)
+        //{
+        //    //#Critical, we need at this point to attempt joining a random room. If it fails we'll get notified in OnJoinRandomFailed() and we'll create one
+        //    PhotonNetwork.JoinRandomRoom();
+        //}
+        //else
         {
             //#Critical, we must first and formost connect to Photon Online Server
             PhotonNetwork.GameVersion = gameVersion;
@@ -119,7 +119,7 @@ public class Launcher : MonoBehaviourPunCallbacks {
 
             // #Critical
             // Load the Room Level.
-            PhotonNetwork.LoadLevel("Menu");
+            PhotonNetwork.LoadLevel("Splas"); //should be menu?
         }
 
         Debug.Log("PUN Basics Tutorial/Launcher: OnJoinedRoom() called by PUN. Now this client is in a room.");
