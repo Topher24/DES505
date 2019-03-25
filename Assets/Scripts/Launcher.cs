@@ -119,7 +119,7 @@ public class Launcher : MonoBehaviourPunCallbacks {
 
             // #Critical
             // Load the Room Level.
-            PhotonNetwork.LoadLevel("Splash Screen");
+            PhotonNetwork.LoadLevel("Menu");
         }
 
         Debug.Log("PUN Basics Tutorial/Launcher: OnJoinedRoom() called by PUN. Now this client is in a room.");
