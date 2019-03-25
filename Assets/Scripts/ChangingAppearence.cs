@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class ChangingAppearence : MonoBehaviour
+public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
 {
 	public bool gender;
     
@@ -22,13 +23,13 @@ public class ChangingAppearence : MonoBehaviour
         {
             if (i == index)
             {
-                part.sprite = options[i];
+                part.sprite = options[i]; //send
             }
         }
     }
 
 	public void showPart(GameObject part){
-		part.SetActive(gender);
+		part.SetActive(gender); //send
 	}
 
 	public void bodyType()
@@ -55,4 +56,23 @@ public class ChangingAppearence : MonoBehaviour
         }
     }
 
+
+    #region IPunObservable implementation
+
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(part.sprite);
+        }
+        else
+        {
+            this.part.sprite = (Sprite)stream.ReceiveNext();
+        }
+
+
+    }
+
+    #endregion
 }

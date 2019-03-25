@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviourPunCallbacks {
     #endregion
 
     #region private methods
-    //might need to change this to work with only 2 players
     void LoadArena()
     {
         if (!PhotonNetwork.IsMasterClient)

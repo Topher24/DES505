@@ -114,12 +114,12 @@ public class Launcher : MonoBehaviourPunCallbacks {
         // #Critical: We only load if we are the first player, else we rely on `PhotonNetwork.AutomaticallySyncScene` to sync our instance scene.
         if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
-            Debug.Log("We load the 'Menu' ");
+            Debug.Log("We load the 'The splash screen' ");
 
 
             // #Critical
             // Load the Room Level.
-            PhotonNetwork.LoadLevel("Menu");
+            PhotonNetwork.LoadLevel("Splash Screen");
         }
 
         Debug.Log("PUN Basics Tutorial/Launcher: OnJoinedRoom() called by PUN. Now this client is in a room.");
