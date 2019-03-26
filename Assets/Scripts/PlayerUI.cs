@@ -14,7 +14,7 @@ public class PlayerUI : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Vector3 avatarPos = new Vector3(Screen.width /2 , Screen.height/2, 0);
+        Vector3 avatarPos = new Vector3(500, 250 , 0);
 
         if (PhotonNetwork.IsMasterClient)
         {

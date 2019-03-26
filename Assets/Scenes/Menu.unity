@@ -658,6 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 131497649}
   - component: {fileID: 131497650}
+  - component: {fileID: 131497651}
   m_Layer: 0
   m_Name: Gender UI
   m_TagString: Untagged
@@ -694,9 +695,30 @@ MonoBehaviour:
   gender: 0
   part: {fileID: 141886795}
   options:
-  - {fileID: 21300000, guid: 503dd5337cf929240ab8889f011d2f64, type: 3}
+  - {fileID: 21300000, guid: 1ab5e921c5842b349989ddc36509c502, type: 3}
   - {fileID: 21300000, guid: 308f8d61a89e20f45ba3a76519c65fab, type: 3}
   index: 0
+--- !u!114 &131497651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 131497648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 131497650}
+  viewIdField: 3
+  InstantiationId: 3
+  isRuntimeInstantiated: 0
 --- !u!212 &141886795 stripped
 SpriteRenderer:
   m_PrefabParentObject: {fileID: 212299067736290402, guid: 2ca1c7274a8f13c4b90b33f3d7c3f2a4,
@@ -1736,6 +1758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 551761577}
   - component: {fileID: 551761576}
+  - component: {fileID: 551761578}
   m_Layer: 5
   m_Name: Skin Colour Manager
   m_TagString: Untagged
@@ -1781,6 +1804,27 @@ RectTransform:
   m_AnchoredPosition: {x: 1, y: 34}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &551761578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 551761575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 551761576}
+  viewIdField: 10
+  InstantiationId: 10
+  isRuntimeInstantiated: 0
 --- !u!1 &567036853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,6 +1834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 567036854}
   - component: {fileID: 567036855}
+  - component: {fileID: 567036856}
   m_Layer: 0
   m_Name: T-Shirt UI
   m_TagString: Untagged
@@ -1829,6 +1874,27 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 21300000, guid: 5060a47c02dc91f48ba90b87d8fec96f, type: 3}
   index: 0
+--- !u!114 &567036856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 567036853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 567036855}
+  viewIdField: 4
+  InstantiationId: 4
+  isRuntimeInstantiated: 0
 --- !u!1 &570117327
 GameObject:
   m_ObjectHideFlags: 0
@@ -2581,9 +2647,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114388445883726660, guid: 2ca1c7274a8f13c4b90b33f3d7c3f2a4,
+        type: 2}
+      propertyPath: ObservedComponents.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4463423801072440, guid: 2ca1c7274a8f13c4b90b33f3d7c3f2a4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 356
+      value: 327
       objectReference: {fileID: 0}
     - target: {fileID: 4463423801072440, guid: 2ca1c7274a8f13c4b90b33f3d7c3f2a4, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2622,17 +2693,33 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 503dd5337cf929240ab8889f011d2f64,
+      objectReference: {fileID: 21300000, guid: 1ab5e921c5842b349989ddc36509c502,
         type: 3}
     - target: {fileID: 4513967808461098, guid: 2ca1c7274a8f13c4b90b33f3d7c3f2a4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 4513967808461098, guid: 2ca1c7274a8f13c4b90b33f3d7c3f2a4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.55
+      value: -1.68
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114388445883726660, guid: 2ca1c7274a8f13c4b90b33f3d7c3f2a4,
+        type: 2}
+      propertyPath: ObservedComponents.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388445883726660, guid: 2ca1c7274a8f13c4b90b33f3d7c3f2a4,
+        type: 2}
+      propertyPath: ObservedComponents.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388445883726660, guid: 2ca1c7274a8f13c4b90b33f3d7c3f2a4,
+        type: 2}
+      propertyPath: ObservedComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2ca1c7274a8f13c4b90b33f3d7c3f2a4, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &740688988
@@ -2765,6 +2852,7 @@ GameObject:
   m_Component:
   - component: {fileID: 767255637}
   - component: {fileID: 767255638}
+  - component: {fileID: 767255639}
   m_Layer: 0
   m_Name: Hair UI
   m_TagString: Untagged
@@ -2805,6 +2893,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 43bb13d9265e21a4d901b51fbc9d3c71, type: 3}
   - {fileID: 21300000, guid: 78ae9556ac69ab743a9332b3bf85cb64, type: 3}
   index: 0
+--- !u!114 &767255639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 767255636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 767255638}
+  viewIdField: 7
+  InstantiationId: 7
+  isRuntimeInstantiated: 0
 --- !u!1 &779487246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2935,6 +3044,7 @@ GameObject:
   m_Component:
   - component: {fileID: 791111265}
   - component: {fileID: 791111264}
+  - component: {fileID: 791111266}
   m_Layer: 5
   m_Name: Shirt Colour Manager
   m_TagString: Untagged
@@ -2980,6 +3090,27 @@ RectTransform:
   m_AnchoredPosition: {x: 1, y: 34}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &791111266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 791111263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 791111264}
+  viewIdField: 9
+  InstantiationId: 9
+  isRuntimeInstantiated: 0
 --- !u!1 &807651340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3648,6 +3779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1039953630}
   - component: {fileID: 1039953631}
+  - component: {fileID: 1039953632}
   m_Layer: 0
   m_Name: Trousers UI
   m_TagString: Untagged
@@ -3687,6 +3819,27 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 21300000, guid: c17001d8db8a0294dbd476ff7818f285, type: 3}
   index: 0
+--- !u!114 &1039953632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1039953629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1039953631}
+  viewIdField: 5
+  InstantiationId: 5
+  isRuntimeInstantiated: 0
 --- !u!1 &1099085318
 GameObject:
   m_ObjectHideFlags: 0
@@ -3897,7 +4050,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 551761576}
+      - m_Target: {fileID: 1868501542}
         m_MethodName: ChangePanelState
         m_Mode: 6
         m_Arguments:
@@ -3943,6 +4096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1162206442}
   - component: {fileID: 1162206443}
+  - component: {fileID: 1162206444}
   m_Layer: 0
   m_Name: Eyes UI
   m_TagString: Untagged
@@ -3984,6 +4138,27 @@ MonoBehaviour:
   - {fileID: 21300004, guid: a70f80a703667974bb758339f3dd1790, type: 3}
   - {fileID: 21300000, guid: a70f80a703667974bb758339f3dd1790, type: 3}
   index: 0
+--- !u!114 &1162206444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1162206441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1162206443}
+  viewIdField: 2
+  InstantiationId: 2
+  isRuntimeInstantiated: 0
 --- !u!1 &1211722856
 GameObject:
   m_ObjectHideFlags: 0
@@ -4203,6 +4378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1503500996}
   - component: {fileID: 1503500997}
+  - component: {fileID: 1503500998}
   m_Layer: 0
   m_Name: Facial Hair UI
   m_TagString: Untagged
@@ -4242,6 +4418,27 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 21300000, guid: 3d2b7f88f1de4264a8ec5bf781f32f50, type: 3}
   index: 0
+--- !u!114 &1503500998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1503500995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1503500997}
+  viewIdField: 6
+  InstantiationId: 6
+  isRuntimeInstantiated: 0
 --- !u!1 &1508358918
 GameObject:
   m_ObjectHideFlags: 0
@@ -4689,6 +4886,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1664787285}
   - component: {fileID: 1664787286}
+  - component: {fileID: 1664787287}
   m_Layer: 0
   m_Name: 'Shoes UI '
   m_TagString: Untagged
@@ -4728,6 +4926,27 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 21300000, guid: 07a56e61a2dfbf046aae621a8ac46d15, type: 3}
   index: 0
+--- !u!114 &1664787287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1664787284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1664787286}
+  viewIdField: 8
+  InstantiationId: 8
+  isRuntimeInstantiated: 0
 --- !u!1 &1708182341
 GameObject:
   m_ObjectHideFlags: 0
@@ -4934,6 +5153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1781572943}
   - component: {fileID: 1781572944}
+  - component: {fileID: 1781572945}
   m_Layer: 0
   m_Name: Mouth UI
   m_TagString: Untagged
@@ -4975,6 +5195,27 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 5a509a1770efbe641add5906cf8a774b, type: 3}
   - {fileID: 21300000, guid: 5a509a1770efbe641add5906cf8a774b, type: 3}
   index: 0
+--- !u!114 &1781572945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1781572942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1781572944}
+  viewIdField: 1
+  InstantiationId: 1
+  isRuntimeInstantiated: 0
 --- !u!1 &1860056867
 GameObject:
   m_ObjectHideFlags: 0
@@ -5226,6 +5467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1868501543}
   - component: {fileID: 1868501542}
+  - component: {fileID: 1868501544}
   m_Layer: 5
   m_Name: Hair Colour Manager
   m_TagString: Untagged
@@ -5271,6 +5513,27 @@ RectTransform:
   m_AnchoredPosition: {x: 1, y: 34}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1868501544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1868501541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1868501542}
+  viewIdField: 11
+  InstantiationId: 11
+  isRuntimeInstantiated: 0
 --- !u!212 &1958985471 stripped
 SpriteRenderer:
   m_PrefabParentObject: {fileID: 212320592062701056, guid: 2ca1c7274a8f13c4b90b33f3d7c3f2a4,
@@ -5351,8 +5614,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 877793090}
-        m_MethodName: 
+      - m_Target: {fileID: 551761576}
+        m_MethodName: ChangePanelState
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

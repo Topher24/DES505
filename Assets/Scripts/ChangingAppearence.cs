@@ -23,7 +23,7 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
         {
             if (i == index)
             {
-                part.sprite = options[i]; //send
+                part.sprite = options[i];
             }
         }
     }
@@ -64,14 +64,14 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
     {
         if (stream.IsWriting)
         {
-            stream.SendNext(part.sprite);
+            stream.SendNext(index);
+            stream.SendNext(gender);
         }
         else
         {
-            this.part.sprite = (Sprite)stream.ReceiveNext();
+            this.index = (int)stream.ReceiveNext();
+            this.gender = (bool)stream.ReceiveNext();
         }
-
-
     }
 
     #endregion

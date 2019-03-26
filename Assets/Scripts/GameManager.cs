@@ -25,10 +25,15 @@ public class GameManager : MonoBehaviourPunCallbacks {
         PhotonNetwork.LeaveRoom();
     }
 
+    public void LoadStart()
+    {
+        SceneManager.LoadScene("Start Screen", LoadSceneMode.Single);
+    }
+
     #endregion
 
     #region private methods
-    void LoadArena(string levelName)
+     void LoadArena(string levelName)
     {
         if (!PhotonNetwork.IsMasterClient)
         {
@@ -52,7 +57,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
             Debug.LogFormat("OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
 
 
-            LoadArena("Splash Screen");
+            LoadArena("Menu");
         }
     }
 
@@ -66,7 +71,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
             Debug.LogFormat("OnPlayerLeftRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
 
 
-            LoadArena("Splash Screen");
+            LoadArena("Menu");
         }
     }
     #endregion

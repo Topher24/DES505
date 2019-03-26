@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
-public class ChangingColourScript : MonoBehaviour {
+public class ChangingColourScript : MonoBehaviourPunCallbacks, IPunObservable
+{ 
 
     public GameObject panel;
     public SpriteRenderer shirt;
@@ -35,5 +37,19 @@ public class ChangingColourScript : MonoBehaviour {
   public void ChangeShirtColor(int index)
     {
         whatColor = index;
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(whatColor);
+
+        }
+        else
+        {
+            this.whatColor = (int)stream.ReceiveNext();
+        }
+        
     }
 }
