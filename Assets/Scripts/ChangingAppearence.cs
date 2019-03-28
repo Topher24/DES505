@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using Photon.Pun;
 
-public class ChangingAppearence : MonoBehaviour
+public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
 {
 	public bool gender;
     
 	//public SpriteRenderer body;
-    public SpriteRenderer part;
+    public Image part;
     public Sprite[] options;
+    
     public int index;
 	//public bool view;
 
@@ -23,12 +26,19 @@ public class ChangingAppearence : MonoBehaviour
             if (i == index)
             {
                 part.sprite = options[i];
+                
             }
         }
+        if(index != 0)
+        {
+            
+        }
+
     }
 
 	public void showPart(GameObject part){
 		part.SetActive(gender);
+       
 	}
 
 	public void bodyType()
@@ -43,16 +53,38 @@ public class ChangingAppearence : MonoBehaviour
 
     
 
-    public void Swap()
+    public void Swap(int i)
     {
-        if (index < options.Length - 1)
+        index = i;
+
+       
+        //if (index < options.Length - 1)
+        //{
+        //    index++;
+        //}
+        //else
+        //{
+        //    index = 0;
+        //}
+    }
+
+
+    #region IPunObservable implementation
+
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
         {
-            index++;
+            stream.SendNext(index);
+            stream.SendNext(gender);
         }
         else
         {
-            index = 0;
+            this.index = (int)stream.ReceiveNext();
+            this.gender = (bool)stream.ReceiveNext();
         }
     }
 
+    #endregion
 }
