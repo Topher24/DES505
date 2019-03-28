@@ -29,7 +29,8 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
     }
 
 	public void showPart(GameObject part){
-		part.SetActive(gender); //send
+		part.SetActive(gender);
+       
 	}
 
 	public void bodyType()
