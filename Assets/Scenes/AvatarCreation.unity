@@ -1179,6 +1179,7 @@ GameObject:
   - component: {fileID: 186127760}
   - component: {fileID: 186127762}
   - component: {fileID: 186127761}
+  - component: {fileID: 186127763}
   m_Layer: 5
   m_Name: Panel_Gender
   m_TagString: Untagged
@@ -1241,6 +1242,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 186127759}
+--- !u!114 &186127763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 186127759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f13e9136785b2b49a68e95d9080e9a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gender: 0
+  part: {fileID: 1385296617}
+  options:
+  - {fileID: 21300000, guid: 1ab5e921c5842b349989ddc36509c502, type: 3}
+  - {fileID: 21300000, guid: 308f8d61a89e20f45ba3a76519c65fab, type: 3}
+  index: 0
 --- !u!1 &206271289
 GameObject:
   m_ObjectHideFlags: 0
@@ -2807,7 +2825,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 43bb13d9265e21a4d901b51fbc9d3c71, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3255,8 +3273,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.7662, y: 1.612}
-  m_SizeDelta: {x: 0.5623, y: 0.6834}
+  m_AnchoredPosition: {x: -1.762, y: 1.566}
+  m_SizeDelta: {x: 0.5447, y: 0.6165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &562248220
 MonoBehaviour:
@@ -4242,7 +4260,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 816523142}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 878850145}
+        m_MethodName: Swap
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &816523142
@@ -4264,9 +4293,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3d2b7f88f1de4264a8ec5bf781f32f50, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -4712,6 +4741,7 @@ GameObject:
   - component: {fileID: 878850142}
   - component: {fileID: 878850144}
   - component: {fileID: 878850143}
+  - component: {fileID: 878850145}
   m_Layer: 5
   m_Name: Panel_Acessories
   m_TagString: Untagged
@@ -4778,6 +4808,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 878850141}
+--- !u!114 &878850145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 878850141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f13e9136785b2b49a68e95d9080e9a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gender: 0
+  part: {fileID: 562248220}
+  options:
+  - {fileID: 21300000, guid: 4e9ac219fcc637842a2e37f67b28d290, type: 3}
+  - {fileID: 21300000, guid: 3d2b7f88f1de4264a8ec5bf781f32f50, type: 3}
+  index: 0
 --- !u!1 &885732064
 GameObject:
   m_ObjectHideFlags: 0
@@ -6323,7 +6370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -169, y: -39}
+  m_AnchoredPosition: {x: -183, y: -39.00003}
   m_SizeDelta: {x: -392.7, y: -96.70001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1165119607
@@ -7208,7 +7255,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1336683997}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 186127763}
+        m_MethodName: Swap
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1336683997
@@ -9292,7 +9350,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1570542421}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 878850145}
+        m_MethodName: Swap
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1570542421
@@ -9314,9 +9383,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2de2b5402a1e7104894b7e3ce41a86ae, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -9958,7 +10027,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1610476197}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 186127763}
+        m_MethodName: Swap
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1610476197
@@ -11701,7 +11781,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 78ae9556ac69ab743a9332b3bf85cb64, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
