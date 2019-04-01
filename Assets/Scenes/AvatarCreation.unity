@@ -1270,6 +1270,7 @@ GameObject:
   - component: {fileID: 206271292}
   - component: {fileID: 206271291}
   - component: {fileID: 206271293}
+  - component: {fileID: 206271294}
   m_Layer: 5
   m_Name: Panel_Lower Body
   m_TagString: Untagged
@@ -1353,6 +1354,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4e9ac219fcc637842a2e37f67b28d290, type: 3}
   - {fileID: 21300000, guid: c17001d8db8a0294dbd476ff7818f285, type: 3}
   index: 0
+--- !u!114 &206271294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 206271289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 206271293}
+  viewIdField: 3
+  InstantiationId: 3
+  isRuntimeInstantiated: 0
 --- !u!1 &207973208
 GameObject:
   m_ObjectHideFlags: 0
@@ -4742,6 +4764,7 @@ GameObject:
   - component: {fileID: 878850144}
   - component: {fileID: 878850143}
   - component: {fileID: 878850145}
+  - component: {fileID: 878850146}
   m_Layer: 5
   m_Name: Panel_Acessories
   m_TagString: Untagged
@@ -4825,6 +4848,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4e9ac219fcc637842a2e37f67b28d290, type: 3}
   - {fileID: 21300000, guid: 3d2b7f88f1de4264a8ec5bf781f32f50, type: 3}
   index: 0
+--- !u!114 &878850146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 878850141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 878850145}
+  viewIdField: 5
+  InstantiationId: 5
+  isRuntimeInstantiated: 0
 --- !u!1 &885732064
 GameObject:
   m_ObjectHideFlags: 0
@@ -6060,6 +6104,7 @@ GameObject:
   - component: {fileID: 1102234336}
   - component: {fileID: 1102234335}
   - component: {fileID: 1102234337}
+  - component: {fileID: 1102234338}
   m_Layer: 5
   m_Name: Panel_Feet
   m_TagString: Untagged
@@ -6143,6 +6188,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4e9ac219fcc637842a2e37f67b28d290, type: 3}
   - {fileID: 21300000, guid: 07a56e61a2dfbf046aae621a8ac46d15, type: 3}
   index: 0
+--- !u!114 &1102234338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102234333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1102234337}
+  viewIdField: 4
+  InstantiationId: 4
+  isRuntimeInstantiated: 0
 --- !u!1 &1119177981
 GameObject:
   m_ObjectHideFlags: 0
@@ -6340,13 +6406,14 @@ GameObject:
   - component: {fileID: 1165119608}
   - component: {fileID: 1165119607}
   - component: {fileID: 1165119609}
+  - component: {fileID: 1165119610}
   m_Layer: 5
   m_Name: Panel_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1165119606
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6424,6 +6491,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 43bb13d9265e21a4d901b51fbc9d3c71, type: 3}
   - {fileID: 21300000, guid: 78ae9556ac69ab743a9332b3bf85cb64, type: 3}
   index: 0
+--- !u!114 &1165119610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1165119605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1165119609}
+  viewIdField: 1
+  InstantiationId: 1
+  isRuntimeInstantiated: 0
 --- !u!1 &1174348789
 GameObject:
   m_ObjectHideFlags: 0
@@ -10663,7 +10751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1684729595
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12374,6 +12462,7 @@ GameObject:
   - component: {fileID: 1993447345}
   - component: {fileID: 1993447344}
   - component: {fileID: 1993447346}
+  - component: {fileID: 1993447347}
   m_Layer: 5
   m_Name: Panel_UpperBody
   m_TagString: Untagged
@@ -12457,6 +12546,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4e9ac219fcc637842a2e37f67b28d290, type: 3}
   - {fileID: 21300000, guid: 5060a47c02dc91f48ba90b87d8fec96f, type: 3}
   index: 0
+--- !u!114 &1993447347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1993447342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1993447346}
+  viewIdField: 2
+  InstantiationId: 2
+  isRuntimeInstantiated: 0
 --- !u!1 &2000517126
 GameObject:
   m_ObjectHideFlags: 0
