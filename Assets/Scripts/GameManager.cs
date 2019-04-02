@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class GameManager : MonoBehaviourPunCallbacks {
+public class GameManager : MonoBehaviourPunCallbacks
+{
 
     #region Photon Callbacks
 
@@ -27,22 +28,20 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
     public void LoadStart()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Start Screen", LoadSceneMode.Single);
     }
 
     #endregion
 
     #region private methods
-    //might need to change this to work with only 2 players
-    void LoadArena()
+    void LoadArena(string levelName)
     {
         if (!PhotonNetwork.IsMasterClient)
         {
             Debug.LogError("PhotonNetwork : Trying to Load a level but we are not the master Client");
-            PhotonNetwork.LoadLevel("Menu");
         }
-        Debug.LogFormat("PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount);
-        PhotonNetwork.LoadLevel("AvatarCreation");
+        Debug.LogFormat("PhotonNetwork : Loading Level with {0} players.", PhotonNetwork.CurrentRoom.PlayerCount);
+        PhotonNetwork.LoadLevel(levelName);
     }
 
     #endregion
@@ -59,7 +58,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
             Debug.LogFormat("OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
 
 
-            LoadArena();
+            LoadArena("AvatarCreation");
         }
     }
 
@@ -73,7 +72,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
             Debug.LogFormat("OnPlayerLeftRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
 
 
-            LoadArena();
+            LoadArena("AvatarCreation");
         }
     }
     #endregion
