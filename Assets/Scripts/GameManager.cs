@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
         if (!PhotonNetwork.IsMasterClient)
         {
             Debug.LogError("PhotonNetwork : Trying to Load a level but we are not the master Client");
+            PhotonNetwork.LoadLevel("Menu");
         }
         Debug.LogFormat("PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount);
         PhotonNetwork.LoadLevel("AvatarCreation");
