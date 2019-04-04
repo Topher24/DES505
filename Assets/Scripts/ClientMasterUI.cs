@@ -7,24 +7,30 @@ using Photon.Realtime;
 
 public class PlayerIU : MonoBehaviour {
 
-    public Canvas canvas;
-    public GameObject avatar;
+ 
+    public Button[] buttons = new Button[6];
 
 	// Use this for initialization
 	void Start () {
-        Vector3 avatarPos = new Vector3(Screen.height / 2, Screen.width / 2, 0);
-        
+
+
         if (PhotonNetwork.IsMasterClient)
         {
-            canvas.enabled = true;
+            for(int i = 0; i < buttons.Length; i++)
+            {
+                buttons[i].interactable = true;
+            }
         }
         else
         {
-            canvas.enabled = false;
-
-            avatar.transform.position = avatarPos;
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                buttons[i].interactable = false;
+            }
         }
-	}
+
+       
+    }
 	
 	// Update is called once per frame
 	void Update () {
