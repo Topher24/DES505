@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Splash Screen 1.unity
+    guid: 2edc49f267001c34f8cd2aba7651d637
+  - enabled: 1
+    path: Assets/Scenes/Start Screen.unity
+    guid: 0ccd97825ef441a4897f32330a7a17cd
+  - enabled: 1
+    path: Assets/Scenes/AvatarCreation.unity
+    guid: 9f70ca46b6a7e2a4fb2f96c2c7512504
   m_configObjects: {}
