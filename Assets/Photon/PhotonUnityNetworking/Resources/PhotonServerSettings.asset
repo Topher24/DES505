@@ -14,7 +14,7 @@ MonoBehaviour:
   AppSettings:
     AppIdRealtime: 138d970f-0d7a-4731-b827-8cd21907cdf6
     AppIdChat: 
-    AppIdVoice: 
+    AppIdVoice: 138d970f-0d7a-4731-b827-8cd21907cdf6
     AppVersion: 
     UseNameServer: 1
     FixedRegion: 
@@ -33,4 +33,4 @@ MonoBehaviour:
   - RespawnSpaceship
   - SwitchPanel
   DisableAutoOpenWizard: 1
-  ShowSettings: 0
+  ShowSettings: 1
