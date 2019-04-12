@@ -14,7 +14,7 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
     Sprite[] options = new Sprite[6];
     public Sprite[] fOptions;
     public Sprite[] mOptions;
-    public int index;
+    int index;
     //public bool view;
 
 
@@ -72,20 +72,36 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
             for (int i = 0; i < buttons.Length; i++)
             {
                 buttons[i].image.sprite = options[i];
-
+                buttons[i].image.preserveAspect = true;
+             
             }
         }
-        
-        for (int i = 0; i < options.Length; i++)
+
+        for (int i = 0; i < buttons.Length; i++)
         {
-            if (i == index)
+            if (buttons[i].image.sprite == null)
             {
-                part.sprite = options[i];
-                
+                buttons[i].interactable = false;
             }
         }
+        if (!PhotonNetwork.IsMasterClient)
+        {
+            for (int i = 0; i < options.Length; i++)
+            {
+                if (i == index)
+                {
+                    part.sprite = options[i];
 
+                }
+            }
+        }
     }
+
+    public void ResetPart(Sprite sprite)
+    {
+        part.sprite = sprite;
+    }
+
 
     static void SetBool(string key, bool state)
     {
@@ -124,11 +140,10 @@ public void showPart(GameObject part){
     }
 
 
-
     public void Swap(int i)
     {
         index = i;
-
+        part.sprite = options[i];
        
         //if (index < options.Length - 1)
         //{
@@ -140,7 +155,11 @@ public void showPart(GameObject part){
         //}
     }
 
-
+    //void setPart(int i)
+    //{
+    //    PhotonView photonView = PhotonView.Get(this);
+    //    photonView.RPC("Swap", RpcTarget.All, i);
+    //}
     #region IPunObservable implementation
 
 

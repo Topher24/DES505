@@ -10,6 +10,10 @@ public class AvatarCreatorUI : MonoBehaviour {
     public GameObject panel1;
     public GameObject panel2;
 
+    public int round = 0; // 0 = english 1 = mandarin
+
+
+
 
     [PunRPC]
     public void SwitchPanel()
@@ -18,6 +22,9 @@ public class AvatarCreatorUI : MonoBehaviour {
 
         panel2.SetActive(true);
     }
+    
+
+    
 
     public void SetActive(GameObject thing, bool active)
     {

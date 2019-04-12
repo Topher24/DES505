@@ -9,14 +9,14 @@ using Photon.Realtime;
 using System.Collections;
 
 
-
-
+namespace Com.MyCompany.MyGame
+{
     /// <summary>
     /// Player name input field. Let the user input his name, will appear above the player in the game.
     /// </summary>
     [RequireComponent(typeof(InputField))]
     public class PlayerNameInputField : MonoBehaviour
-{
+    {
         #region Private Constants
 
 
@@ -44,12 +44,20 @@ using System.Collections;
                 if (PlayerPrefs.HasKey(playerNamePrefKey))
                 {
                     defaultName = PlayerPrefs.GetString(playerNamePrefKey);
-                    _inputField.text = defaultName;
+                    if (defaultName[0] == _inputField.text[0])
+                    {
+                        _inputField.text = defaultName;
+                        PhotonNetwork.NickName = defaultName;
+                    }
+                    else
+                    {
+                        defaultName = null;
+                    }
                 }
             }
 
 
-            PhotonNetwork.NickName = defaultName;
+            
         }
 
 
@@ -68,7 +76,7 @@ using System.Collections;
             // #Important
             if (string.IsNullOrEmpty(value))
             {
-                Debug.LogError("Player Name is null or empty");
+                Debug.LogError("Player Name is null or empty " + value);
                 return;
             }
             PhotonNetwork.NickName = value;
@@ -78,5 +86,6 @@ using System.Collections;
         }
 
 
-    #endregion
+        #endregion
+    }
 }

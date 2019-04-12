@@ -32,5 +32,6 @@ MonoBehaviour:
   - Fire
   - RespawnSpaceship
   - SwitchPanel
+  - Swap
   DisableAutoOpenWizard: 1
   ShowSettings: 1
