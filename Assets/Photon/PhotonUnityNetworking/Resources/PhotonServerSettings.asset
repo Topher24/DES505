@@ -32,6 +32,12 @@ MonoBehaviour:
   - Fire
   - RespawnSpaceship
   - SwitchPanel
+<<<<<<< HEAD
   - Swap
+  - OnEnable
+  - bodyType
+  - ResetPart
+=======
+>>>>>>> parent of 56eb534... Various bug Fixes
   DisableAutoOpenWizard: 1
   ShowSettings: 1

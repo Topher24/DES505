@@ -9,14 +9,14 @@ using Photon.Realtime;
 using System.Collections;
 
 
-namespace Com.MyCompany.MyGame
-{
+
+
     /// <summary>
     /// Player name input field. Let the user input his name, will appear above the player in the game.
     /// </summary>
     [RequireComponent(typeof(InputField))]
     public class PlayerNameInputField : MonoBehaviour
-    {
+{
         #region Private Constants
 
 
@@ -44,20 +44,16 @@ namespace Com.MyCompany.MyGame
                 if (PlayerPrefs.HasKey(playerNamePrefKey))
                 {
                     defaultName = PlayerPrefs.GetString(playerNamePrefKey);
-                    if (defaultName[0] == _inputField.text[0])
-                    {
-                        _inputField.text = defaultName;
-                        PhotonNetwork.NickName = defaultName;
-                    }
-                    else
-                    {
-                        defaultName = null;
-                    }
+                    _inputField.text = defaultName;
                 }
             }
 
 
-            
+<<<<<<< HEAD
+
+=======
+            PhotonNetwork.NickName = defaultName;
+>>>>>>> parent of 56eb534... Various bug Fixes
         }
 
 
@@ -76,7 +72,7 @@ namespace Com.MyCompany.MyGame
             // #Important
             if (string.IsNullOrEmpty(value))
             {
-                Debug.LogError("Player Name is null or empty " + value);
+                Debug.LogError("Player Name is null or empty");
                 return;
             }
             PhotonNetwork.NickName = value;
@@ -86,6 +82,5 @@ namespace Com.MyCompany.MyGame
         }
 
 
-        #endregion
-    }
+    #endregion
 }
