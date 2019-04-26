@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
-  tags:
-  - Mandarin
-  - English
-  - Master
-=======
   tags: []
->>>>>>> parent of 56eb534... Various bug Fixes
   layers:
   - Default
   - TransparentFX
