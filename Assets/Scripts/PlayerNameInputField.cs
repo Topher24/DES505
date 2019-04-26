@@ -47,13 +47,7 @@ using System.Collections;
                     _inputField.text = defaultName;
                 }
             }
-
-
-<<<<<<< HEAD
-
-=======
             PhotonNetwork.NickName = defaultName;
->>>>>>> parent of 56eb534... Various bug Fixes
         }
 
 

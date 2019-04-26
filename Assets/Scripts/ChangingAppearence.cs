@@ -14,19 +14,25 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
     Sprite[] options = new Sprite[6];
     public Sprite[] fOptions;
     public Sprite[] mOptions;
-<<<<<<< HEAD
+
     int index;
     public Sprite empty;
-=======
-    public int index;
->>>>>>> parent of 56eb534... Various bug Fixes
-    //public bool view;
+
+    //public int index;
+
+  
 
 
- 
+
+
+
     public override void OnEnable()
 
     {
+        /////////////////////////////////////
+        //////this gets called too much//////
+        /////////////////////////////////////
+
         //if (PhotonNetwork.IsMasterClient)
         gender = GetBool("Gender");
      
@@ -47,8 +53,11 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
             for (int i = 0; i < buttons.Length; i++)
             {
                 buttons[i].image.sprite = options[i];
+            }
+        }
 
-<<<<<<< HEAD
+       
+
         for (int i = 0; i < buttons.Length; i++)
         {
             if (buttons[i].image.sprite == null)
@@ -61,8 +70,8 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
             }
         }
 
-       
-      
+        
+
     }
 
     [PunRPC]
@@ -70,22 +79,13 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
     {
         part.sprite = empty;
        
-       
-=======
-            }
-        }
-        
-        for (int i = 0; i < options.Length; i++)
-        {
-            if (i == index)
-            {
-                part.sprite = options[i];
-                
-            }
-        }
-
->>>>>>> parent of 56eb534... Various bug Fixes
+            
     }
+        
+     
+
+
+    
     
 
     static void SetBool(string key, bool state)
@@ -142,32 +142,26 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
             options[i] = null;
         }
 
-        ChangeOptions();
-
-
-<<<<<<< HEAD
+       
     }
 
     [PunRPC]
-=======
 
->>>>>>> parent of 56eb534... Various bug Fixes
-    public void Swap(int i)
+    public void Swap(int j)
     {
-        index = i;
+        index = j;
 
-       
-        //if (index < options.Length - 1)
-        //{
-        //    index++;
-        //}
-        //else
-        //{
-        //    index = 0;
-        //}
+        for (int i = 0; i < options.Length; i++)
+        {
+            if (i == index)
+            {
+                part.sprite = options[i];
+
+            }
+        }
     }
 
-<<<<<<< HEAD
+
     //RPC Functions
 
     public void RPCReset()
@@ -189,9 +183,9 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
         PhotonView photonView = PhotonView.Get(this);
         photonView.RPC("Swap", RpcTarget.All, i);
     }
-=======
 
->>>>>>> parent of 56eb534... Various bug Fixes
+
+
     #region IPunObservable implementation
 
 

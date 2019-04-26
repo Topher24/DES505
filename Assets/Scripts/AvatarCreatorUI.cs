@@ -9,13 +9,12 @@ public class AvatarCreatorUI : MonoBehaviour {
 
     public GameObject panel1;
     public GameObject panel2;
-<<<<<<< HEAD
+
     
     public int round = 0; // 0 = english 1 = mandarin
 
 
-=======
->>>>>>> parent of 56eb534... Various bug Fixes
+
 
 
     [PunRPC]
@@ -26,7 +25,7 @@ public class AvatarCreatorUI : MonoBehaviour {
         panel2.SetActive(true);
 
     }
-<<<<<<< HEAD
+
 
     void UITitles(string trueString, string falseString)
     {
@@ -53,8 +52,6 @@ public class AvatarCreatorUI : MonoBehaviour {
     }
     
     
-=======
->>>>>>> parent of 56eb534... Various bug Fixes
 
     private void Start()
     {
