@@ -113,6 +113,12 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
 
     void ChangeOptions()
     {
+
+        for (int i = 0; i < options.Length; i++)
+        {
+            options[i] = null;
+        }
+
         if (!gender)
         {
             for (int i = 0; i < fOptions.Length; i++)
@@ -136,11 +142,17 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
         
         gender = ans;
         SetBool("Gender", ans);
-
-        for (int i = 0; i < options.Length; i++)
+        if (gender)
         {
-            options[i] = null;
+            Swap(0);
         }
+        else
+        {
+            Swap(1);
+        }
+
+        
+        ChangeOptions();
 
        
     }

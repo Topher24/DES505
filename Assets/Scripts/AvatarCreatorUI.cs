@@ -98,7 +98,7 @@ public class AvatarCreatorUI : MonoBehaviour {
             }
         }
 
-        
+
 
     }
 

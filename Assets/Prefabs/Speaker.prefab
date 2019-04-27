@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1586099028162546}
+  m_RootGameObject: {fileID: 1859889905455524}
   m_IsPrefabParent: 1
---- !u!1 &1586099028162546
+--- !u!1 &1859889905455524
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4013165528623938}
-  - component: {fileID: 82891097521143088}
-  - component: {fileID: 114333714017662714}
+  - component: {fileID: 4412192363206926}
+  - component: {fileID: 82274724922225574}
+  - component: {fileID: 114940924189569364}
   m_Layer: 0
   m_Name: Speaker
   m_TagString: Untagged
@@ -28,25 +28,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4013165528623938
+--- !u!4 &4412192363206926
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1586099028162546}
+  m_GameObject: {fileID: 1859889905455524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 507, y: 250, z: 0}
+  m_LocalPosition: {x: 480.2003, y: 262.54456, z: -3.410249}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82891097521143088
+--- !u!82 &82274724922225574
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1586099028162546}
+  m_GameObject: {fileID: 1859889905455524}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -136,12 +136,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114333714017662714
+--- !u!114 &114940924189569364
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1586099028162546}
+  m_GameObject: {fileID: 1859889905455524}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd7fea91fe63f4e1b884ef1e16a975c3, type: 3}

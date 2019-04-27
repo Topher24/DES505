@@ -118,10 +118,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 
 
 
-    private void Update()
-    {
-      
-    }
+    
     #endregion
 }
 
