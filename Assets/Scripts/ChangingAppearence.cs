@@ -62,16 +62,13 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
         {
             if (buttons[i].image.sprite == null)
             {
-                buttons[i].gameObject.SetActive(false);
+               buttons[i].gameObject.SetActive(false);
             }
             else
             {
                 buttons[i].gameObject.SetActive(true);
             }
         }
-
-        
-
     }
 
     [PunRPC]
@@ -81,6 +78,8 @@ public class ChangingAppearence : MonoBehaviourPunCallbacks, IPunObservable
        
             
     }
+
+   
         
      
 

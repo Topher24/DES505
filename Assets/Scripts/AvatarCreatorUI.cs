@@ -74,11 +74,11 @@ public class AvatarCreatorUI : MonoBehaviour {
             }
 
 
-        if (getString(PhotonNetwork.NickName) == "English")
+        if (getString(PhotonNetwork.NickName) == "Mandarin")
         {
             UITitles("English", "Mandarin");
         }
-        else if (getString(PhotonNetwork.NickName) == "Mandarin")
+        else if (getString(PhotonNetwork.NickName) == "English")
         {
             UITitles("Mandarin", "English");
         }
@@ -95,6 +95,19 @@ public class AvatarCreatorUI : MonoBehaviour {
             for (int i = 0; i < masterComps.Length; i++)
             {
                 masterComps[i].SetActive(false);
+            }
+        }
+
+        GameObject[] clientComps;
+
+        clientComps = GameObject.FindGameObjectsWithTag("Client");
+
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+            for (int i = 0; i < clientComps.Length; i++)
+            {
+               // clientComps[i].SetActive(false);
             }
         }
 
